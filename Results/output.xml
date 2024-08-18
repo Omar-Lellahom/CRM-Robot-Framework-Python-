@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-17T19:48:22.541866" rpa="false" schemaversion="5">
+<suite id="s1" name="Crm" source="C:\Users\USER\Desktop\Crm\Test\Crm.robot">
+<test id="s1-t1" name="Should be able to add new Customer" line="15">
+<kw name="Begin Web Test" owner="Common" type="SETUP">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.2</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-08-17T19:48:22.894100" elapsed="0.001001"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2024-08-17T19:48:22.895101" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-17T19:48:22.896102" level="INFO">Opening browser 'chrome' to base url 'about:blanc'.</msg>
+<arg>about:blanc</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-17T19:48:22.896102" elapsed="3.839664"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-17T19:48:26.736773" elapsed="0.549260"/>
+</kw>
+<status status="PASS" start="2024-08-17T19:48:22.893100" elapsed="4.392933"/>
+</kw>
+<kw name="Go to home page" owner="CrmApp">
+<kw name="Navigate To" owner="Home">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-08-17T19:48:27.289551" level="INFO">Opening url 'https://automationplayground.com/crm/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-08-17T19:48:27.289551" elapsed="3.714876"/>
+</kw>
+<status status="PASS" start="2024-08-17T19:48:27.288551" elapsed="3.715876"/>
+</kw>
+<kw name="Verify Page loaded" owner="Home">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${HOMME_HEADER_LABEL}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-08-17T19:48:31.005430" elapsed="0.220253"/>
+</kw>
+<status status="PASS" start="2024-08-17T19:48:31.004427" elapsed="0.221256"/>
+</kw>
+<status status="PASS" start="2024-08-17T19:48:27.287546" elapsed="3.938137"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-08-17T19:48:31.226689" level="INFO">Clicking link 'id=SignIn'.</msg>
+<arg>id=SignIn</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-17T19:48:31.226689" elapsed="0.961559"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-17T19:48:32.190251" level="INFO">Typing text 'omar.ben.lellahom@gmail.com' into text field 'id=email-id'.</msg>
+<arg>id=email-id</arg>
+<arg>omar.ben.lellahom@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-17T19:48:32.189249" elapsed="0.917170"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-17T19:48:33.108617" level="INFO">Typing text '123' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-17T19:48:33.107625" elapsed="0.743779"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-08-17T19:48:33.851827" level="INFO">Clicking button 'id=submit-id'.</msg>
+<arg>id=submit-id</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-17T19:48:33.851827" elapsed="1.339827"/>
+</kw>
+<kw name="End Web Test" owner="Common" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-08-17T19:48:35.194658" elapsed="2.363202"/>
+</kw>
+<status status="PASS" start="2024-08-17T19:48:35.192656" elapsed="2.366227"/>
+</kw>
+<doc>This is same basic info about the</doc>
+<tag>Smoke</tag>
+<status status="PASS" start="2024-08-17T19:48:22.892099" elapsed="14.667776"/>
+</test>
+<status status="PASS" start="2024-08-17T19:48:22.544868" elapsed="15.020005"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Crm">Crm</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
