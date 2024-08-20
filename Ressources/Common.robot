@@ -4,7 +4,7 @@ Library    SeleniumLibrary
 
 
 *** Variables ***
-${URL}=                   https://automationplayground.com/crm/
+
 ${BROWSER}=               chrome
 
 
