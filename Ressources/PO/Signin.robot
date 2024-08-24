@@ -2,6 +2,7 @@
 Library    SeleniumLibrary
 
 
+Resource    AddCustomer.robot
 
 *** Variables ***
 
@@ -27,5 +28,23 @@ Click "submit" Button
     Click Button          id=submit-id  
 
     
-   
+login with missig credentiels
+    [Arguments]    ${EMAIL_INVALID}        ${PASSWORD_INVALID}  
+    Fill "Username" Field               ${EMAIL_INVALID}    
+    Fil "Password" Field               ${PASSWORD_INVALID}
+    click boutton submit
 
+
+Fill "Username" Field
+    [Arguments]     ${EMAIL_INVALID}  
+    Input Text     id=email-id      ${EMAIL_INVALID} 
+Fil "Password" Field 
+    [Arguments]         ${PASSWORD_INVALID}
+    Input Password     id=password     ${PASSWORD_INVALID}
+
+click boutton submit
+    Click Button    id=submit-id       
+
+
+verifier login failed
+   Element Should Not Be Visible    Our Happy Customers
